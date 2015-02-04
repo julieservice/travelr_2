@@ -1,0 +1,26 @@
+<ion-pane>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Travelr</h1>
+      </ion-header-bar>
+
+      <ion-content>
+        <ion-list>
+        <ion-item data-ng-repeat="location in detailId" class="transparent-bg">
+        
+        <h2>{{location.name}}</h2>
+        <a href="#/lists" ><img data-ng-src="img/next15.png" class="arrow" alt="next"></a>
+        
+
+       <div class="textwrap"> <p id="desc">{{location.tips}}</p></div>
+
+
+        <img src="img/{{location.image}}" alt="destinationimage">
+        
+
+
+        </ion-item>
+      </ion-list>
+      </ion-content>
+
+
+    </ion-pane>
