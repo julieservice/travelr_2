@@ -29,7 +29,7 @@ destinationApp.config(function($routeProvider) {
 
 destinationApp.controller('destinationController', function($scope, $http) {
   $scope.loadDestination = function() {
-    $http.get("includes/destinations.php").success(function(response){
+    $http.get('http://alyssa-mahon.ca/Travelr/destinations.php').success(function(response){
       console.log(response);
       $scope.locations = response;
     })
@@ -41,7 +41,7 @@ destinationApp.controller('destinationController', function($scope, $http) {
 
 destinationApp.controller('DetailsController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
   $scope.destinationId = $routeParams.destinationId;
-  $http.get('includes/details.php?destinationId=' + $routeParams.destinationId).success(function(response) {
+  $http.get('http://alyssa-mahon.ca/Travelr/details.php?destinationId=' + $routeParams.destinationId).success(function(response) {
     console.log(response);
     $scope.detailId = response;
   });
